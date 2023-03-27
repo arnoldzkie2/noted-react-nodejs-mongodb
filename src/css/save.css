@@ -1,0 +1,27 @@
+.save-modal {
+    position: fixed;
+    background: rgba(0,0,0,0.7);
+    width: 100px;
+    height: 25px; 
+    top: 15%;
+    right: 0;
+    border-radius: 5px;
+    z-index: 999;
+    display: flex;
+    justify-content: center;
+    background-color: var(--accent);
+    color: white;
+    font-weight: bold;
+    animation: showSave 0.7s forwards;
+    align-items: center;
+}
+
+@keyframes showSave {
+    0% {
+        transform: translateX(100%);
+    } 95% {
+        transform: translateX(-30%);
+    } 100% {
+        transform: translateX(120%);
+    }
+}
