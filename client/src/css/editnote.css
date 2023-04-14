@@ -1,0 +1,67 @@
+.edit-note{
+    position: fixed;
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    background-color: var(--main);
+}
+
+.edit-note .edit-left {
+    padding: 10px 30px;
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid var(--second1);
+}
+
+.edit-left input {
+ width: 100%;
+ margin: 0 3%;
+ font-size: min(max(1rem, 2vw), 1.5rem);
+ background-color: var(--main1);
+ outline: none;
+ padding: 6px 10px;
+ color: var(--second);
+ border: none;
+ border-radius: 3px;
+}
+.edit-left input::placeholder {
+    color: var(--second1);
+}
+
+.edit-note .edit-text {
+    height: 100%;
+    width: 100%;
+}
+
+.edit-note .edit-text textarea{
+    height: 100%;
+    padding: 20px 30px;
+    background-color: var(--main);
+    width: 100%;
+    color: var(--second1);
+    resize: none;
+    outline: none;
+    border: none;
+    font-size: min(max(1.2rem, 2vw), 1.6rem);
+}
+
+
+.edit-note .edit-text textarea::placeholder {
+    color: var(--second1);
+}
+.edit-options {
+    display: flex;
+    margin-left: 20px;
+    gap:25px;
+}
+
+.edit-options i {
+    color: var(--accent);
+    cursor: pointer;
+    font-size: min(max(1.3rem, 3vw), 1.8rem);
+}
+
+.edit-options i:active {
+    color: var(--second1)
+}

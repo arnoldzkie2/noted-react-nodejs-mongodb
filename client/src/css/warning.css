@@ -1,0 +1,46 @@
+.pop-warning {
+    background-color: var(--second1);
+    position: absolute;
+    color: var(--main);
+    margin: 20px;
+    right: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    top: 10%;
+    padding: 8px 20px;
+    border-radius: 4px;
+    animation: showWarning 0.3s forwards;
+  }
+  @keyframes showWarning {
+    0% {
+    transform: translateX(130%);
+    } 100% {
+      transform: translateX(0);
+    } 
+  }
+  
+  .pop-warning .warning-option {
+    display: flex;
+    align-items: center;
+    margin-top: 5px;
+    width: 100%;
+    gap: 10px;
+  }
+  
+  .pop-warning .warning-option button {
+    width: 70px;
+    height: 25px;
+    font-weight: bold;
+    font-size: 1rem;
+    cursor: pointer;
+    color: var(--second);
+    border-radius: 3px;
+    background-color: var(--main);
+    border: none;
+  }
+  
+  .pop-warning .warning-option button:last-child {
+    background-color: var(--accent);
+    color: white;
+  }
