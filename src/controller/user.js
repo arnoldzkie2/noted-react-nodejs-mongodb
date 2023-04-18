@@ -35,9 +35,14 @@ const registerUser = asyncWrapper(async (req, res) => {
 //login user
 const loginUser = asyncWrapper(async (req, res) => {
   const {email, password} = req.body
+  const checkEmail = await User.findOne({email: email})
+  const checkPassword = await User.findOne({password: password})
+  if(checkEmail && !checkPassword){
+    return res.status(201).json({msg: 'wrong-pass'})
+  }
   const user = await User.findOne({email: email, password: password});
   if (!user) {
-    return res.status(404).json({ msg: "invalid" });
+    return res.status(201).json({ msg: "invalid" });
   }
   const notes = await Note.find({_id: user._id})
   res.status(201).json({ user, notes });
