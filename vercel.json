@@ -1,5 +1,6 @@
 {
 "version": 2,
+  "framework": "node",
 "name": "socketing",
 "builds": [
 {
@@ -10,7 +11,7 @@
 "routes":[
 {
 "src": "/(.*)",
-"dest": "/public"
+"dest": "/app.js"
 }
 ]
 }
