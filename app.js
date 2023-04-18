@@ -17,10 +17,11 @@ app.use(express.static('./public'));
 app.all('*', (req,res) => {
   res.json({data: "Page nout found"})
 })
+const url = 'mongodb+srv://noted:noted123@notedapp.pzcupoj.mongodb.net/NotedApp?retryWrites=true&w=majority'
 const port = process.env.PORT || 5000
 const start = async () => {
   try {
-    await connectDB(process.env.MONGO_URI);
+    await connectDB(url);
     app.listen(port, () => {
       console.log(`Server is listening on port ${port}...`);
     });
