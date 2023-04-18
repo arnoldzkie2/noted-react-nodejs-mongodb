@@ -1,17 +1,16 @@
 {
-"version": 2,
-  "framework": "node",
-"name": "socketing",
-"builds": [
-{
-"src": "app.js",
-"use": "@vercel/node"
-}
-],
-"routes":[
-{
-"src": "/(.*)",
-"dest": "/app.js"
-}
-]
+  "version": 2,
+  "name": "noted",
+  "builds": [
+    {
+      "src": "app.js",
+      "use": "@vercel/node"
+    }
+  ],
+  "routes": [
+    {
+      "src": "/(.*)",
+      "dest": "/public/$1"
+    }
+  ]
 }
